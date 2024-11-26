@@ -1,2 +1,2 @@
-id -u
-echo "$0"
+userid=id -u
+scriptname=$(echo "$0" | cut -d " " -f2)
