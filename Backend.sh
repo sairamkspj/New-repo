@@ -4,7 +4,7 @@
 # timestamp=$(date +%Y-%m-%d-%H-%m-%s)
 # Log_filename="$Log_folder/$Script_name-$timestamp.log"
 # mkdir -p $Log_filename
-userid=$(id -u)
+userid=$(1)
 
 R="\e[31m"
 G="\e[32m"
@@ -21,4 +21,13 @@ validate_root(){
     fi
 }
 
-validate_root "$userid"
+# Checking(){
+#     if [ $1 eq 0]
+#     then
+#         echo -
+# }
+
+# validate_root "$userid"
+
+# dnf module disable nodejs -y
+
