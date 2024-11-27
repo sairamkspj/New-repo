@@ -64,7 +64,7 @@ Checking "$?" "backend code"
 npm install >>$Log_filename
 Checking "$?" "dependencies install"
 
-cp /home/ec2-user/New-repo/backend.service /etc/systemd/system/backend.service $>>Log_filename
+cp /home/ec2-user/New-repo/backend.service /etc/systemd/system/backend.service >>$Log_filename
 
 systemctl daemon-reload >>$Log_filename
 Checking "$?" "daemon reload"
