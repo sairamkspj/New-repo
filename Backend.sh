@@ -26,7 +26,7 @@ validate(){
         echo -e "$G $2 the above code is  exicuted successfully"
     
     else
-        echo -e "$R not succesfull"
+        echo -e "$R $2 not succesfull"
     
     fi
 }
@@ -57,6 +57,7 @@ checkinfiles(){
 
 
 } 
+}
 
 
 #curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
