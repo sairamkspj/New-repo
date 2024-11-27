@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 Log_folder="/var/log/expense"
 Script_name=$("echo $0" | cut -d "." -f1)
 timestamp=$(date +%Y-%m-%d-%H-%m-%s)
@@ -16,7 +16,7 @@ validate_root(){
     then
         echo -e "$G we are performing the task with root privillages" | tee -a $Log_filename
     else
-        echo -e " $R we are performing the task with out root privillages" | | tee -a $Log_filename
+        echo -e " $R we are performing the task with out root privillages" | tee -a $Log_filename
         exit 1
     fi
 }
