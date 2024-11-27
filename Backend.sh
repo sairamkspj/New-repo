@@ -51,13 +51,13 @@ validate "$?" "directory created"
 data=$(ls)
 
 checkinfiles(){
-    if( "$?" eq 0 ){
+    if [ "$?" eq 0 ]{
     then
     echo "data"
 
 
-}
-}
+} 
+
 
 #curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
 
