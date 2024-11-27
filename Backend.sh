@@ -53,10 +53,8 @@ data=$(ls)
 checkinfiles(){
     if [ "$?" eq 0 ]
     then
-    echo "data"
-
-
-
+        echo "data"
+    fi
 }
 
 
