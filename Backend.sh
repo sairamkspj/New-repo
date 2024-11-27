@@ -54,6 +54,8 @@ checkinfiles(){
     if [ "$1" -eq 0 ]
     then
         echo "$data"
+    else
+        echo "we could not find directory"
     fi
 }
 
