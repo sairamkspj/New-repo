@@ -3,7 +3,7 @@ Log_folder="/var/log/expense"
 Script_name=$(echo $0 | cut -d "." -f1)
 timestamp=$(date +%Y-%m-%d-%H-%m-%s)
 Log_filename="$Log_folder/$Script_name-$timestamp.log"
-mkdir -p $Log_filename
+mkdir -p $Log_folder
 userid=$(id -u)
 
 R="\e[31m"
