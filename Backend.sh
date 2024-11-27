@@ -53,7 +53,7 @@ data=$(ls)
 checkinfiles(){
     if [ "$1" -eq 0 ]
     then
-        echo "data"
+        echo "$data"
     fi
 }
 
