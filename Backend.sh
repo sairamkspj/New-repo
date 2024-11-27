@@ -3,7 +3,7 @@ filepath="/var/log/expense"
 scriptname=$(echo "$0" | cut -d "." -f2)
 timestamp=$(date +%Y-%m-%d-%H-%M-%S)
 logfile="$filepath/$scriptname-$timestamp.log"
-#mkdir -p $logfile
+mkdir -p $logfile
 
 R="\e[31m"
 G="\e[32m"
@@ -32,19 +32,19 @@ validate(){
 }
 check_root
 
-#echo -e "$G installing for backend"
+echo -e "$G installing for backend"
 
-#dnf module disable nodejs -y
-# validate "$?" "disableing nodejs"
+dnf module disable nodejs -y
+validate "$?" "disableing nodejs"
 
-# dnf module enable nodejs:20 -y
-# validate "$?" "enableing nodejs"
+dnf module enable nodejs:20 -y
+validate "$?" "enableing nodejs"
 
-# dnf install nodejs -y
-# validate "$?" "installing nodesjs"
+dnf install nodejs -y
+validate "$?" "installing nodesjs"
 
-# useradd expense
-# validate "$?" "adding expense user"
+useradd expense
+validate "$?" "adding expense user"
 
 mkdir -p /app
 validate "$?" "directory created"
