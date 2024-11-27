@@ -33,54 +33,54 @@ Checking(){
 
 validate_root "$userid"
 
-dnf module disable nodejs -y >> $Log_filename
+dnf module disable nodejs -y >>$Log_filename
 Checking "$?" "disable nodejs"
 
-dnf module enable nodejs:20 -y >> $Log_filename
+dnf module enable nodejs:20 -y >>$Log_filename
 Checking "$?" "enable nodejs:20"
 
-dnf install nodejs -y >> $Log_filename
+dnf install nodejs -y >>$Log_filename
 Checking "$?" "install nodejs:20"
 
-id expense >> $Log_filename
+id expense >>$Log_filename
 
 if [ "$?" -nq 0 ]
 then
     echo -e "$R user is creating" | tee -a $Log_filename
-    useradd expense >> $Log_filename
+    useradd expense >>$Log_filename
     Checking "$?" "expense user creation" 
 else
     echo -e "$G user is created $Y skipping the user" | tee -a $Log_filename
 fi
 
-mkdir -p /app >> $Log_filename
+mkdir -p /app >>$Log_filename
 Checking "$?" "creating /app folder"
 curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
 
-cd /app >> $Log_filename
-unzip /tmp/backend.zip >> $Log_filename
+cd /app >>$Log_filename
+unzip /tmp/backend.zip >>$Log_filename
 Checking "$?" "backend code"
 
-npm install >> $Log_filename
+npm install >>$Log_filename
 Checking "$?" "dependencies install"
 
 cp /home/ec2-user/New-repo/backend.service /etc/systemd/system/backend.service $>>Log_filename
 
-systemctl daemon-reload >> $Log_filename
+systemctl daemon-reload >>$Log_filename
 Checking "$?" "daemon reload"
 
-systemctl start backend >> $Log_filename
+systemctl start backend >>$Log_filename
 Checking "$?" "start backend"
 
-systemctl enable backend >> $Log_filename
+systemctl enable backend >>$Log_filename
 Checking "$?" "enable backend"
 
-dnf install mysql -y >> $Log_filename
+dnf install mysql -y >>$Log_filename
 Checking "$?" "install mysql"
 
-mysql -h <backend.saiawsdev.shop> -uroot -pExpenseApp@1 < /app/schema/backend.sql >> $Log_filename
+mysql -h <backend.saiawsdev.shop> -uroot -pExpenseApp@1 < /app/schema/backend.sql >>$Log_filename
 Checking "$?" "backend connection"
 
-systemctl restart backend >> $Log_filename
+systemctl restart backend >>$Log_filename
 Checking "$?" "restart backend"
 
