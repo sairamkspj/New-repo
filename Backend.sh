@@ -16,8 +16,8 @@ validate_root(){
     then
     echo -e "$G we are performing the task with root privillages"
     else
-        echo -e " $R we are performing the task with out root privillages"
-        exit 1
+    echo -e " $R we are performing the task with out root privillages"
+    exit 1
     fi
 }
 
