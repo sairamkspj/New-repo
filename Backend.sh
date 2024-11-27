@@ -48,7 +48,7 @@ validate "$?" "adding expense user"
 
 mkdir -p /app
 validate "$?" "directory created"
-data=$(ls)
+
 
 checkinfiles(){
     if [ "$1" -eq 0 ]
@@ -61,4 +61,5 @@ checkinfiles(){
 #curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
 
 cd /app
+data=$(ls)
 checkinfiles "$?"
