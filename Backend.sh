@@ -43,8 +43,8 @@ dnf install nodejs -y >>$Log_filename
 Checking "$?" "install nodejs:20"
 
 id expense >>$Log_filename
-
-if [ "$?" -nq 0 ]
+d1=$(echo "$?")
+if [ $d1 -nq 0 ]
 then
     echo -e "$R user is creating" | tee -a $Log_filename
     useradd expense >>$Log_filename
