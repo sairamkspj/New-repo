@@ -1,6 +1,6 @@
 #!/bin/bash
 Log_folder="/var/log/expense"
-Script_name=$("echo $0" | cut -d "." -f1)
+Script_name=$(echo $0 | cut -d "." -f1)
 timestamp=$(date +%Y-%m-%d-%H-%m-%s)
 Log_filename="$Log_folder/$Script_name-$timestamp.log"
 mkdir -p $Log_filename
@@ -22,7 +22,7 @@ validate_root(){
 }
 
 Checking(){
-    if [ $1 eq 0 ]
+    if [ $1 -eq 0 ]
     then
         echo -e "$G $2 is successfull" | tee -a $Log_filename
     else
