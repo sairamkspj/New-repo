@@ -14,9 +14,9 @@ Y="\e[33m"
 validate_root(){
     if [ $1 -eq 0 ]
     then
-    echo -e "$G we are performing the task with root privillages"
+        echo -e "$G we are performing the task with root privillages"
     else
-    echo -e " $R we are performing the task with out root privillages"
+        echo -e " $R we are performing the task with out root privillages"
     exit 1
     fi
 }
@@ -27,7 +27,7 @@ validate_root(){
 #         echo -
 # }
 
-# validate_root "$userid"
+validate_root "$userid"
 
 # dnf module disable nodejs -y
 
