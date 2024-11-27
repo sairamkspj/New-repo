@@ -14,9 +14,9 @@ Y="\e[33m"
 validate_root(){
     if [ $1 -eq 0 ]
     then
-    echo " $G we are performing the task with root privillages"
+    echo -e "$G we are performing the task with root privillages"
     else
-        echo " $R we are performing the task with out root privillages"
+        echo -e " $R we are performing the task with out root privillages"
         exit 1
     fi
 }
