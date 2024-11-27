@@ -51,12 +51,12 @@ validate "$?" "directory created"
 data=$(ls)
 
 checkinfiles(){
-    if [ "$?" eq 0 ]{
+    if [ "$?" eq 0 ]
     then
     echo "data"
 
 
-} 
+
 }
 
 
