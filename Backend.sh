@@ -8,10 +8,11 @@ userid=$(id -u)
 
 R="\e[31m"
 G="\e[32m"
+N="\e[0m"
 Y="\e[33m"
 
 validate_root(){
-    if [ $1 -ne 0]
+    if [ $1 -eq 0 ]
     then
     echo "$G we are performing the task with root privillages"
     else
