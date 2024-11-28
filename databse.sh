@@ -30,5 +30,5 @@ Checking(){
     fi
 }
 
-vlidate_root
+validate_root
 Checking $? "install mysql-server"
