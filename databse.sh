@@ -42,7 +42,7 @@ Checking $? "start mysqld"
 # mysql_secure_installation --set-root-pass ExpenseApp@1
 # Checking $? "password changing"
 nslookup mysql.saiawsdev.shop
-if[ $? -eq 0 ]
+if [ $? -eq 0 ]
 then
     mysql -h mysql.saiawsdev.shop -u root -pExpenseApp@1
     Checking $? "connecting mysql-server"
