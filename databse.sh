@@ -10,13 +10,14 @@ G="\e[32m"
 Y="\e[33m"
 
 validate_root(){
-    if [ $userid -eq 1]
+    if [ $userid -eq 1 ]
     then
         echo -e "$G user has root permissions and $Y successfull"
     else
         echo -e "$R user doesn't has root permissions and $Y unsuccessfull"
 }
 
+validate_root
 # Checking(){
 #     if [ $1 -ne 0]
 #     Then
