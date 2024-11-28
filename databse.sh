@@ -45,8 +45,7 @@ nslookup mysql.saiawsdev.shop
 if [ $? -eq 0 ]
 then
     mysql -h mysql.saiawsdev.shop -u root -pExpenseApp@1
-    Checking $? "connecting mysql-server"
-
+    echo "$G performing passwordcreation task "
 else
     echo -e "$R connection is unsuccesfull"
     exit 1
