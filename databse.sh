@@ -45,7 +45,7 @@ nslookup mysql.saiawsdev.shop
 if [ $? -eq 0 ]
 then
     mysql -h mysql.saiawsdev.shop -u root -pExpenseApp@1
-    echo "$G performing passwordcreation task"
+    echo "$Y performing passwordcreation task"
 else
     echo -e "$R connection is unsuccesfull"
     exit 1
@@ -54,7 +54,7 @@ fi
 
 if [ $? -ne 0 ]
 then
-    echo -e "$R connection is unsuccessful $Y creating paasword now"
+    echo -e "$G connection is unsuccessful $Y creating paasword now"
     mysql_secure_installation --set-root-pass ExpenseApp@1
     Checking $? "password creation"
 else
