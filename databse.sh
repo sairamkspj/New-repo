@@ -54,7 +54,7 @@ else
 fi
 
 
-if [ $? -ne 0 ]
+if [ $? -eq 0 ]
 then
     echo -e "$G connection is unsuccessful $Y creating paasword now" | tee -a $Log_filename
     mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$Log_filename
