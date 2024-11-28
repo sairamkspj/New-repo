@@ -22,7 +22,7 @@ validate_root(){
 validate_root
 Checking(){
     if [ $1 -ne 0 ]
-    Then
+    then
         echo -e "$R $2 is $Y unsuccessful"
         exit 1
     else
