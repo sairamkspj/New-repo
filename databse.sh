@@ -4,7 +4,8 @@ timestamp=$(date +%Y-%m-%d-%H-%M-%S)
 Log_filename="$Log_folder/$Script_name-$timestamp.log"
 mkdir -p $Log_folder
 
-userid=$(id -u) &>>$Log_filename
+userid=$(id -u) 
+echo "User ID: $userid" &>>$Log_filename
 echo "$G user has root permissions and $Y successfull" | tee -a $Log_filename
 # R="\e[31m"
 # G="\e[32m"
