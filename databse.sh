@@ -15,20 +15,21 @@ validate_root(){
         echo -e "$G user has root permissions and $Y successfull"
     else
         echo -e "$R user doesn't has root permissions and $Y unsuccessfull"
+        exit 1
     fi
 }
 
 validate_root
-# Checking(){
-#     if [ $1 -ne 0]
-#     Then
-#         echo -e "$R $2 is $Y unsuccessful"
-#         exit 1
-#     else
-#         echo -e "$G is $Y succesfull"
-#     fi
+Checking(){
+    if [ $1 -ne 0]
+    Then
+        echo -e "$R $2 is $Y unsuccessful"
+        exit 1
+    else
+        echo -e "$G is $Y succesfull"
+    fi
 
-# }
+}
 
-# dnf install mysql-server -y
-# Checking $? "install mysql-server"
+lidate_root
+Checking $? "install mysql-server"
