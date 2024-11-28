@@ -42,14 +42,14 @@
 # dnf install nodejs -y >>$Log_filename
 # Checking "$?" "install nodejs:20"
 
-id expense >>$Log_filename
+D=$(id expense) #>>$Log_filename
 if [ $? -nq 0 ]
 then
-    echo -e "$R user is creating" | tee -a $Log_filename
-    useradd expense >>$Log_filename
+    echo -e "$R user is creating" #| tee -a $Log_filename
+    useradd expense #>>$Log_filename
     Checking "$?" "expense user creation" 
 else
-    echo -e "$G user is created $Y skipping the user" | tee -a $Log_filename
+    echo -e "$G user is created $Y skipping the user" #| tee -a $Log_filename
 fi
 
 # mkdir -p /app >>$Log_filename
