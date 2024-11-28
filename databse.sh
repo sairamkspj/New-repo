@@ -15,6 +15,7 @@ validate_root(){
         echo -e "$G user has root permissions and $Y successfull"
     else
         echo -e "$R user doesn't has root permissions and $Y unsuccessfull"
+    fi
 }
 
 validate_root
