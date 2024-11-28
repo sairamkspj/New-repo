@@ -43,7 +43,7 @@
 # Checking "$?" "install nodejs:20"
 
 D=$(id expense) #>>$Log_filename
-if [ $? -nq 0 ]
+if [ $D -nq 0 ]
 then
     echo -e "$R user is creating" #| tee -a $Log_filename
     useradd expense #>>$Log_filename
