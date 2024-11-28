@@ -42,7 +42,7 @@ Checking $? "start mysqld"
 # mysql_secure_installation --set-root-pass ExpenseApp@1
 # Checking $? "password changing"
 
-mysql -h mysql.saiawsdev.shop -u root -p ExpenseApp@1
+mysql -h mysql.saiawsdev.shop -u root -pExpenseApp@1
 if [ $? -ne 0]
 then
     echo -e "$R connection is unsuccessful $Y creating paasword now"
