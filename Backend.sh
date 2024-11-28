@@ -77,7 +77,7 @@ Checking "$?" "enable backend"
 dnf install mysql -y >>$Log_filename
 Checking "$?" "install mysql"
 
-mysql -h backend.saiawsdev.shop -uroot -pExpenseApp@1 < /app/schema/backend.sql >>$Log_filename
+mysql -h mysql.saiawsdev.shop -uroot -pExpenseApp@1 < /app/schema/backend.sql >>$Log_filename
 Checking "$?" "backend connection"
 
 systemctl restart backend >>$Log_filename
