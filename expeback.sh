@@ -72,7 +72,7 @@ cp /home/ec2-user/New-repo/backend.service /etc/systemd/system/backend.service
 dnf install mysql -y &>>$LOG_FILE
 VALIDATE $? "Installing MySQL Client"
 
-mysql -h mysql.saiawsdev.shop -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE
+mysql -h mysql.saiawsdev.shop -uroot -pExpenseApp1@1 < /app/schema/backend.sql &>>$LOG_FILE
 VALIDATE $? "Schema loading"
 
 systemctl daemon-reload &>>$LOG_FILE
