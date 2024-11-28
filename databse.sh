@@ -10,7 +10,7 @@ G="\e[32m"
 Y="\e[33m"
 
 validate_root(){
-    if [ $userid -eq 1 ]
+    if [ $userid -eq 0 ]
     then
         echo -e "$G user has root permissions and $Y successfull"
     else
